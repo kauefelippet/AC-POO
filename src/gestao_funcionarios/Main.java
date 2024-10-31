@@ -15,12 +15,24 @@ public class Main {
         Gerente g1 = new Gerente("Maria", 5_000, 20);
         Diretor d1 = new Diretor("Carlos", 10_000, 30, 2_000);
 
-        tecnologia.adicionarFuncionario(f1);
         tecnologia.adicionarFuncionario(g1);
         tecnologia.adicionarFuncionario(d1);
+        tecnologia.adicionarFuncionario(f1);
 
         tecnologia.imprimirSalariosFuncionarios();
 
-        System.out.println("\n\nFolha de pagamento: R$" + tecnologia.calcularFolhaPagamento());
+        System.out.printf("\nFolha de pagamento -> %s", tecnologia.getNome() +
+                        ": R$" + tecnologia.calcularFolhaPagamento() + "\n\n");
+
+        Funcionario f2 = new Funcionario("José", 3_000);
+
+        tecnologia.adicionarFuncionario(f2);
+        tecnologia.exibirFuncionarios();
+
+        System.out.printf("\nFolha de pagamento -> %s", tecnologia.getNome() +
+                ": R$" + tecnologia.calcularFolhaPagamento() + "\n\n");
+
+        tecnologia.removerFuncionario(f2);
+        tecnologia.exibirFuncionarios();
     }
 }

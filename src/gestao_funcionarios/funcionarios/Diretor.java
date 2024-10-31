@@ -46,4 +46,9 @@ public class Diretor extends FuncionarioBase implements Beneficios {
     public void setAuxilioMoradia(double auxilioMoradia) {
         this.auxilioMoradia = auxilioMoradia;
     }
+
+    @Override
+    public String toString() {
+        return "Diretor: " + this.getNome();
+    }
 }

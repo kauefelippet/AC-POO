@@ -36,4 +36,9 @@ public class Gerente extends FuncionarioBase implements Beneficios {
     public void setBonusPercentual(double bonusPercentual) {
         this.bonusPercentual = bonusPercentual;
     }
+
+    @Override
+    public String toString() {
+        return "Gerente: " + this.getNome();
+    }
 }

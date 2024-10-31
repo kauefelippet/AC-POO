@@ -15,4 +15,9 @@ public class Funcionario extends FuncionarioBase {
     public double calcularSalario(double bonusAdicional) {
         return this.getSalarioBase() + bonusAdicional;
     }
+
+    @Override
+    public String toString() {
+        return "Funcionário: " + this.getNome();
+    }
 }
